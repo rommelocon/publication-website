@@ -1,29 +1,30 @@
 import { Link } from 'react-router-dom';
+import { getImagePath } from '../utils/imagePath';
 
 const ProductCategories = () => {
   const categories = [
     {
       title: "Preschool Books",
       description: "Educational materials for early childhood learning",
-      image: "/preschool.jpg",
+      image: "preschool.jpg",
       link: "/products/preschool"
     },
     {
       title: "Grade School Books",
       description: "Comprehensive curriculum for elementary students",
-      image: "/gradeschool.jpg",
+      image: "gradeschool.jpg",
       link: "/products/gradeschool"
     },
     {
       title: "Junior High School Books",
       description: "Advanced learning materials for junior high students",
-      image: "/juniorhigh.jpg",
+      image: "juniorhigh.jpg",
       link: "/products/juniorhigh"
     },
     {
       title: "Senior High School Books",
       description: "Specialized textbooks for senior high education",
-      image: "/seniorhigh.jpg",
+      image: "seniorhigh.jpg",
       link: "/products/seniorhigh"
     }
   ];
@@ -43,7 +44,7 @@ const ProductCategories = () => {
             >
               <div 
                 className="w-full h-full bg-cover bg-center relative flex items-center justify-center"
-                style={{ backgroundImage: `url(${category.image})` }}
+                style={{ backgroundImage: `url(${getImagePath(category.image)})` }}
               >
                 <div className="bg-linear-to-b from-primary/70 to-primary/90 w-full h-full flex flex-col items-center justify-center p-8 text-center text-white transition-all duration-300 hover:from-primary/80 hover:to-primary/95">
                   <h3 className="text-3xl mb-2 font-semibold">

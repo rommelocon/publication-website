@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getImagePath } from '../utils/imagePath';
 
 const Header = () => {
   return (
@@ -8,7 +9,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative">
               <img 
-                src="/logo.png" 
+                src={getImagePath('logo.png')} 
                 alt="St. Augustine Publications Logo" 
                 className="h-14 w-auto drop-shadow-lg transition-transform duration-300 group-hover:scale-105" 
               />

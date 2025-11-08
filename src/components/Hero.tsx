@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getImagePath } from '../utils/imagePath';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,17 +8,17 @@ const Hero = () => {
     {
       title: "Facilitating Effective Teaching and Learning",
       description: "St. Augustine Publications, Inc. dedicates itself to provide quality books and reading materials to enhance the minds of its customers.",
-      image: "/slide1.jpg"
+      image: "slide1.jpg"
     },
     {
       title: "Quality Educational Materials",
       description: "Empowering students with comprehensive learning resources for all levels.",
-      image: "/slide2.jpg"
+      image: "slide2.jpg"
     },
     {
       title: "Recognizing Filipino Teachers",
       description: "Supporting the wonderful efforts of Filipino teachers in the total development of the youth.",
-      image: "/slide3.jpg"
+      image: "slide3.jpg"
     }
   ];
 
@@ -43,7 +44,7 @@ const Hero = () => {
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
             style={{ 
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${slide.image})` 
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${getImagePath(slide.image)})` 
             }}
           >
             <div className="text-center text-white max-w-4xl px-8 z-10">
